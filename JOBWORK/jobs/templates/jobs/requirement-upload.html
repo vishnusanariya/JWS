@@ -1,0 +1,60 @@
+{% extends 'jobs/base.html'%}
+{%load static%}
+{%block title%}job-upload{%endblock%}
+{%block css%}<link rel="stylesheet" href="{% static 'requirement-upload.css' %}"/>{%endblock%}
+{%block body%}
+    <div class="profile">
+        <div class="user" id="userid">{{username}}</div>
+        <div class="heading">UPLOAD YOUR REQUIREMENT
+        </div>
+        </br>
+        </br>
+        </br>
+        <form action="jobUpload" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+        <div class="job-type-dropdown">
+
+            Industry type:
+            </br>
+            <div class="dropdown">
+               <select name="job-type" id="job-type">
+                 <option value="ceramic">CERAMIC</option>
+                 <option value="textile">TEXTILE</option>
+                 <option value="casting">CASTING</option>
+                 <option value="other">OTHER</option>
+               </select>
+            </div>
+        </div>
+        </br>
+        job title:
+        <input type="text" class="text-success" id="job-title" name="job-title" placeholder="eg.100 set of tiles/saris/valves">
+        </br>
+            Description:<textarea class="bg-transparent mt-2 text-success" name="job-description"></textarea>
+        </br>
+        <div class="amount">
+            Amount:<input type="number" name="amount" class="text-success" placeholder="INR only">
+        </div>
+        <div class="timelimit">
+            Duration :<input type="text" class="text-success" placeholder="e.g.1-month"name="deadline" id="timelimit">
+        </div>
+        <div class="job-image">
+          Upload Image or pdf of job:<input type="file" name="job-image" id="job image">
+        </div>
+    </br>
+        <div class="btnOperation">
+            <button type="submit" id="bt1" class="btn btn-primary btn-sm">UPLOAD</button>
+            <button type="button" id="bt3" class="btn btn-secondary btn-sm">Cancel</button>
+        </div>
+    </form>
+    </div>
+
+    <script type="text/javascript">
+
+    function getOption() {
+        selectElement = document.querySelector('#dropdownMenulink');
+        output = selectElement.options[selectElement.selectedIndex].value;
+        document.querySelector('.output').textContent = output;
+    }
+    </script>
+{%endblock%}

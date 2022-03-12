@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css%}<link rel="stylesheet" href="{% static 'home.css' %}">{%endblock%}
+
+
+
+{% block title%}HOME{%endblock%}
+
+{% block body%}
+
+<div class="divcontainer">
+  <img src="{% static 'image/HOME-1.jpg' %}" class="img-fluid" >
+  <div class="BUT1">  
+    <div class="product-price-btn">
+      <a href="{% url 'Job' %}" >  
+      <button type="button" name="job-upload" >UPLOAD JOB</button>
+      </a>
+    </div>
+  </div>
+  <div class="BUT2">  
+    <div class="product-price-btn">
+      <a href="{% url 'viewjob'%} ">
+        <button type="button" name="view-job">FIND JOBS</button>
+      </a>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+{%endblock%}
