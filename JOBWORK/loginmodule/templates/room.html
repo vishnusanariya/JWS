@@ -11,7 +11,7 @@
   max-width: 100px;
   padding: 0 20px;
 }*/
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+/* .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
     display: flex;
     flex-wrap: inherit;
     max-width: none;
@@ -37,14 +37,14 @@
     appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
+} */
 .btn-outline-success {
     color: #198754;
     height: 40px;
     margin-top: 7px;
     border-color: #198754;
 }
-.form-control {
+/* .form-control {
     display: block;
     width: 50%;
     height: 50px;
@@ -69,7 +69,7 @@
   width: auto;
   padding-right: 0px;
   margin-right: 0px;
-}
+} */
 .aa {
   margin: 0 auto;
   max-width: 800px;
@@ -77,7 +77,7 @@
   color: aqua;
 }
 
-.container {
+.display>.container {
   /* border: 2px solid #dedede; */
   /* background-color: #f1f1f1; */
   border-radius: 5px;
@@ -91,13 +91,13 @@
   background-color: #ddd;
 } */
 
-.container::after {
+.display>.container::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.container img {
+/* .container img {
   float: left;
   max-width: 60px;
   width: 100%;
@@ -110,65 +110,29 @@
   margin-left: 20px;
   margin-right:0;
   
-}
+} */
 
-.time-right {
+/* .time-right {
   float: right;
   color: #aaa;
+}*/
+.msg-right{
+  float: right;
 }
-
 .time-left {
-  float: left;
   color: #999;
+} 
+.navbar input[type=search]{
+  height: 40px;
+  margin-top: 8px;
 }
+#message{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
 </style>
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" alt="..." height="36" width="70">
-      </a>
-      
-      <div class="container-fluid">
-        <form class="d-flex" method="post" action="/search">
-          {% csrf_token %}
-          <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
-          <select class="form-select" style="width: 200px;" name="search_cat" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="username">username</option>
-            <option value="companyname">companyname</option>
-            
-          </select>
-        <form class="d-flex">
-         
-          <button class="btn btn-outline-success mx-2" type="submit">Search</button>
-        </form>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-
-          <a class="navbar-brand" href="{% url 'gotochat' %}">
-            <img src="{% static 'navbar-chat.png' %}" alt="" width="45" height="45">
-
-          
-          <a class="navbar-brand" href="{% url 'homepage' %}">
-            <img src="{% static 'home (1).png'%}" alt="" width="45" height="45">
-          </a>
-          <a class="navbar-brand" href="{% url 'logout' %}">
-            <img src="{% static 'exit.png' %}" alt="" width="45" height="45">
-          </a>
-         
-          <a class="navbar-brand" href="{% url 'profilepage' %}">
-            <img src="{% static 'profile.png' %}" alt="" width="45" height="45">
-          </a>  
-
-          <a class="navbar-brand" href="{% url 'profilepage' %}">
-            <img src="{% static 'profile.png' %}" alt="" width="45" height="45">
-          </a>  
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
+  
 
   <div class="aa">
 <h2>{{room}} - ChatRoom</h2>
@@ -194,7 +158,7 @@ setInterval(function(){
             $("#display").empty();
             for (var key in response.messages)
             {
-                var temp="<div class='container darker'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value+"</p><span class='time-left'>"+response.messages[key].date+"</span></div>";
+                var temp="<div class='container darker msg-right'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value+"</p><span class='time-left'>"+response.messages[key].date+"</span></div></br>";
                 $("#display").append(temp);
             }
         },
@@ -224,9 +188,9 @@ input[type=text], select {
           width: 10%;
           background-color: #4CAF50;
           color: white;
-          padding: 14px 20px;
+          padding: 9px 20px;
           margin: 8px 0;
-          height: 50px;
+          height: 40px;
           border: none;
           border-radius: 4px;
           cursor: pointer;

@@ -139,8 +139,7 @@ def dealrequest(request,i):
     d2=deal.objects.all()
     print(d2)
     jobsend={'total_jobs':d2}
-    return render(request,'jobs/deal.html',jobsend)
-
+    return redirect('viewjob')
 
 def dealapprove(request,i,j):
     username=request.session['uname']

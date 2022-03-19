@@ -22,17 +22,17 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" alt="..." height="36" width="70">
+      <a class="navbar-brand" href="{% url 'homepage' %}">
+        <img src="{%static 'logo.png'%}" alt="..." height="36" width="70">
       </a>
       
       <div class="container-fluid">
         <form class="d-flex" method="post" action="/search">
           {% csrf_token %}
           <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search">
-          <select class="form-select" style="width: 200px;" name="search_cat" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="username">username</option>
+          <select class="form-select" style="width: 200px; color: gray;" name="search_cat" aria-label="Default select example">
+            <option >Open this select menu</option>
+            <option value="username" selected>username</option>
             <option value="companyname">companyname</option>
             
           </select>
@@ -45,28 +45,28 @@
         <ul class="navbar-nav ms-auto">
 
           <a class="navbar-brand" href="{% url 'gotochat' %}">
-            <img src="{% static 'navbar-chat.png' %}" alt="" width="45" height="45">
+            <img src="{% static 'chat1.png' %}" alt="" width="45" height="45">
 
           
           <a class="navbar-brand" href="{% url 'homepage' %}">
-            <img src="{% static 'home (1).png'%}" alt="" width="45" height="45">
+            <img src="{% static 'home.png'%}" alt="" width="45" height="45">
           </a>
           <a class="navbar-brand" href="{% url 'logout' %}">
-            <img src="{% static 'exit.png' %}" alt="" width="45" height="45">
+            <img src="{% static 'logout.png' %}" alt="" width="45" height="45">
           </a>
          
           <a class="navbar-brand" href="{% url 'profilepage' %}">
-            <img src="{% static 'profile.png' %}" alt="" width="45" height="45">
+            <img src="{% static 'profile (2).png' %}" alt="" width="45" height="45">
           </a>  
 
           <a class="navbar-brand" href="{% url 'allhistory' %}">
-            <img src="{% static 'profile.png' %}" alt="" width="45" height="45">
+            <img src="{% static 'history.png' %}" alt="" width="45" height="45">
           </a>  
           <a class="navbar-brand" href="{% url 'myjobs' %}">
-            <img src="{% static 'profile.png' %}" alt="" width="45" height="45">
+            <img src="{% static 'my jobs (1).png' %}" alt="" width="45" height="45">
           </a>  
           <a class="navbar-brand" href="{% url 'alldeals' %}">
-            <img src="{% static 'profile.png' %}" alt="" width="45" height="45">
+            <img src="{% static 'deals.png' %}" alt="" width="45" height="45">
           </a>  
           </li>
         </ul>

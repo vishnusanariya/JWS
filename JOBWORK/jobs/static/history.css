@@ -47,7 +47,7 @@ body {
 
 #userid p {
     float: right;
-    text-decoration: chartreuse;
+    text-decoration: #59238F;
     font-size: 15px;
     background: transparent;
     border-color: whitesmoke;
@@ -62,13 +62,13 @@ body {
     position: absolute;
     margin-top: 120px;
     text-align: center;
-    color: rgb(235, 235, 235);
+    color: #59238F;
     font-size: 20px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 800px;
-    height: 800px;
+    height: 700px;
     min-height: 200px;
     background: #000000;
     border-radius: 10px;
@@ -76,35 +76,17 @@ body {
     box-sizing: border-box;
 }
 .job-image{
-    padding-left: 10px;
-    text-align:left ;
-
+    padding-left: 100px;
+    padding-top: 10px;
+    width: 760px;
 }
 .job-type-dropdown{
-   
-    padding-left: 10px;
-    text-align:left ;
+    display: inline-flex;
+    padding: 2px;
 }
-.job-title{
-    
-    color: rgb(235, 235, 235);
-    padding-left: 10px;
-    text-align:left ;
-}
-.job-des{
-    padding-left: 10px;
-    text-align:left ;
-
-}
-.amount{
-    padding-left: 10px;
-    text-align:left ;
- 
-}
-.timelimit{
-    padding-left: 10px;
-    text-align:left ;
-
+#job-title{
+    font-size: 15px;
+    color: black;
 }
 .profile input[type="text"],
 .profile input[type="number"]{
@@ -135,16 +117,4 @@ body {
 }
 #bt3{
     float:right ;
-}
-
-h3 {
-    color: #59238F;
-    text-align:left ;
-}
-h1{
-    color: #59238F;
-}
-
-.job-type-dropdown{
-    text-align:left ;
 }

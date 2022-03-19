@@ -1,27 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {{cname}}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css%}<link rel="stylesheet" href="{% static 'profile.css' %}">{%endblock%}
+{% block title%}profile{%endblock%}
+{% block body%}
     <br>
-    {{oname}}
-    <br>
-    {{gst}}
-    <br>
-    {{bio}}
-    <br>
-    {{add}}
-    <br>
-    {{contact}}
-    <br>
-    {{email}}
-    <br>
-   
-    <br>
-</body>
-</html>
+        
+
+        <div class="loginBox"> <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+            <h3>PROFILE</h3>
+            <div class="content">
+            
+                 {% csrf_token %}
+
+                 <p style="color:rgb(235, 235, 235)">
+                 COMPANY NAME:-{{cname}}<br>
+                 OWNER NAME:-{{oname}}<br>
+                 GST NO:-{{gst}}<br>
+                 ABOUT:-{{bio}}<br>
+                 ADDRESS:-{{add}}<br>
+                 CONT NUM:-{{contact}}<br>
+                 EMAI{{email}}<br>
+                 {{editt}}<br>
+                </p>
+                
+    </p>
+{%endblock%}
+
+
+    

@@ -135,18 +135,50 @@ span {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #ffffff;
-  background-color: #42d4ab;
+  background-color: #5e2b91;
   cursor: pointer;
   outline: none;
 }
 
 .product-price-btn button:hover {
-  background-color: #53a08b;
+  background-color: #5c16a3;
 }
 
 .jt{
   text-decoration-color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 20px;
 }
 .amt{
   text-decoration-color: white;
+  padding-right: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+
+}
+.amt1{
+  padding-right: 10px;
+
+}
+
+.product-price-btn1 button {
+  float: right;
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  margin-top: 10px;
+  margin: 0 40px 5 16px;
+  box-sizing: border-box;
+  border: transparent;
+  border-radius: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  background-color: #5e2b91;
+  cursor: pointer;
+  outline: none;
 }

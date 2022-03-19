@@ -18,7 +18,7 @@
     Job Amount:{{i.job_amount}}
     <img src="{{MEDIA_URL}}image/{{i.job_image}}" alt="">
     </br>
-    <a href="{% url 'viewjob' %}">
+    <a href="{% url 'dealreq' i.id %}">
         <input type="submit" value="DEAL" name="dealdone">
     </a>
     </div>
